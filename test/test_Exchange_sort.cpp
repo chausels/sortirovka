@@ -1,5 +1,5 @@
 #include <catch.hpp>
-#include "exchange_sort.h"
+#include "Exchange_sort.h"
 
 TEST(ExchangeSortTest, EmptyArray) {
     int arr[] = {};
