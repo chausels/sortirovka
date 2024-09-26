@@ -1,25 +1,14 @@
-﻿#define CATCH_CONFIG_MAIN
+#include "insertion_sort.h"
 
-#include <catch.hpp>
-#include "BubbleSort.h"
-
-
-TEST_CASE() {
-	int Array[5] = { 2, 6, 5, 3, 9 };
-	int N = 5;
-	BubbleSort(Array, N);
-	for (int i = 0; i < N - 1; i++) {
-		REQUIRE(Array[i] <= Array[i + 1]);
-	}
-	int Array2[5] = {};
-	BubbleSort(Array2, N);
-	for (int i = 0; i < N - 1; i++) {
-		REQUIRE(Array2[i] <= Array2[i + 1]);
-	}
-	double Array3[5] = { 2.3, 5, -1, 8, -20 };
-	BubbleSort(Array3, N);
-	for (int i = 0; i < N - 1; i++) {
-		REQUIRE(Array3[i] <= Array3[i + 1]);
-	}
-
+template <typename T>
+void insertionSort(T arr[], int n) {
+    for (int i = 1; i < n; i++) {
+        T key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
 }
