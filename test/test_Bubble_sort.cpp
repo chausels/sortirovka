@@ -1,5 +1,5 @@
 #include <catch.hpp>
-#include "bubble_sort.h"
+#include "Bubble_sort.h"
 
 TEST(BubbleSortTest, EmptyArray) {
     int arr[] = {};
