@@ -1,2 +1,3 @@
 #include "bubble_sort.cpp"
-template<typename T> void bubble_sort(T *array, int array_size);
+template <typename T>
+void bubbleSort(T arr[], int n);
