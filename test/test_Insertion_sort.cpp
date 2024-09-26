@@ -1,5 +1,5 @@
 #include <catch.hpp>
-#include "insertion_sort.h"
+#include "Insertion_sort.h"
 
 TEST(InsertionSortTest, EmptyArray) {
     int arr[] = {};
